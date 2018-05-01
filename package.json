@@ -1,0 +1,23 @@
+{
+  "name": "bdaycard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apvilkko/bdaycard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apvilkko/bdaycard/issues"
+  },
+  "homepage": "https://github.com/apvilkko/bdaycard#readme",
+  "devDependencies": {
+    "parceljs": "0.0.1"
+  }
+}

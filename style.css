@@ -60,8 +60,6 @@ body {
 .video-container video {
   min-width: 100vw;
   min-height: 100vh;
-	max-width: 200vw;
-	max-height: 150vh;
 
   position: absolute;
   top: 50%;
@@ -91,10 +89,29 @@ body {
 }
 
 @keyframes bounce {
-  from {
-    transform: translateY(0vh);
-  }
-  to {
-    transform: translateY(-20vh);
-  }
+  from {transform: translateY(0vh);}
+  to {transform: translateY(-20vh);}
+}
+
+#balloons {
+	position: absolute;
+	bottom: -30vh;
+	right: 5vw;
+	width: 25vw;
+	height: 30vh;
+	background: url(balloons.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	animation: slideup 5s infinite ease-in-out, shift 3s infinite alternate;
+}
+
+@keyframes slideup {
+	0% {transform: translateY(0vh) rotate(-10deg);}
+	50% {transform: translateY(-70vh) rotate(10deg);}
+	100% {transform: translateY(-140vh) rotate(-10deg);}
+}
+
+@keyframes shift {
+	from {right: 0vw;}
+	to {right: 10vw;}
 }
