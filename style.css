@@ -1,60 +1,153 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
-	background: black;
+  background: black;
+  font-family: Gaegu;
+  font-size: 18vh;
 }
 
+#text {
+  margin-top: 5vh;
+  width: 50%;
+  text-align: center;
+  text-shadow: 1px 1px 5vh white;
+}
+
+#text > div {
+  animation: spin 4s linear infinite;
+}
 
 .video-container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-	z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .video-container video {
@@ -64,54 +157,95 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .animation-container {
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #teddy1 {
-	position: absolute;
-	bottom: -25vh;
-	left: 10vw;
-	width: 30vw;
-	height: 30vh;
-	background: url(teddybear.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	animation: bounce 1s infinite alternate;
+  position: absolute;
+  bottom: -25vh;
+  left: 10vw;
+  width: 30vw;
+  height: 30vh;
+  background: url(teddybear.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: bounce 1s infinite alternate;
 }
 
 @keyframes bounce {
-  from {transform: translateY(0vh);}
-  to {transform: translateY(-20vh);}
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-20vh);
+  }
 }
 
 #balloons {
-	position: absolute;
-	bottom: -30vh;
-	right: 5vw;
-	width: 25vw;
-	height: 30vh;
-	background: url(balloons.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	animation: slideup 5s infinite ease-in-out, shift 3s infinite alternate;
+  position: absolute;
+  bottom: -30vh;
+  right: 5vw;
+  width: 25vw;
+  height: 30vh;
+  background: url(balloons.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: slideup 5s infinite ease-in-out, shift 3s infinite alternate;
 }
 
 @keyframes slideup {
-	0% {transform: translateY(0vh) rotate(-10deg);}
-	50% {transform: translateY(-70vh) rotate(10deg);}
-	100% {transform: translateY(-140vh) rotate(-10deg);}
+  0% {
+    transform: translateY(0vh) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-70vh) rotate(10deg);
+  }
+  100% {
+    transform: translateY(-140vh) rotate(-10deg);
+  }
 }
 
 @keyframes shift {
-	from {right: 0vw;}
-	to {right: 10vw;}
+  from {
+    right: 0vw;
+  }
+  to {
+    right: 10vw;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(180deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  75% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+#start {
+  font-size: 15vw;
+  z-index: 10;
+}
+
+#text {
+  display: none;
 }

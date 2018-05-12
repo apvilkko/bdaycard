@@ -1,3 +1,6 @@
+import './style.css';
+import config from './config.js';
+
 let videoEl = null;
 
 function getViewSize() {
@@ -19,9 +22,29 @@ function scaleVideo() {
   videoEl.height = scale[1];
 }
 
+const COLORS = ['#54b64b', '#01a4ce', '#ec2426'];
+
 document.addEventListener('DOMContentLoaded', function() {
   videoEl = document.getElementById('video');
   scaleVideo();
+
+  document.getElementById('start').addEventListener('click', function () {
+    document.getElementById('audio').play();
+    document.getElementById('video').play();
+    scaleVideo();
+    document.getElementById('start').style.display = 'none';
+    document.getElementById('text').style.display = 'block';
+  });
+
+  document.title = config.title;
+  const textEl = document.getElementById('text');
+  config.text.forEach((text, i) => {
+    const newDiv = document.createElement('div');
+    newDiv.appendChild(document.createTextNode(text));
+    newDiv.style.color = COLORS[i % COLORS.length];
+    newDiv.style['animation-delay'] = (i * 0.5) + 's';
+    textEl.appendChild(newDiv);
+  });
 }, false);
 
 window.addEventListener('resize', function() {
